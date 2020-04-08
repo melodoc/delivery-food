@@ -105,6 +105,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 44px;
 }
 
 .section-title {
@@ -115,4 +116,92 @@ body {
     line-height: 42px;
     margin: 0;
     color: #000000;
+}
+
+.cards {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.card-image {
+    width: 384px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-text{
+    padding-top: 20px;
+    padding-bottom: 35px;
+    padding-left: 23px;
+    padding-right: 23px;
+}
+
+.card-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-title {
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.card-tag {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: #ffffffff;
+    background: #262626;
+    border-radius: 2px;
+    padding: 1px 8px;
+}
+
+.card-info{
+    display: flex;
+    align-items: center;
+}
+
+.rating{
+    margin-right: 26px;
+    color: #FFC107;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.price,
+.category{
+    color: #8C8C8C;
+    font-size: 18px;
+    line-height: 32px;    
+}
+
+.price {
+    margin-right: 10px;
+}
+
+.price:after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #8C8C8C;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-left: 10px;
 }
