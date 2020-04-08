@@ -19,19 +19,27 @@ body {
     margin-bottom: 40px;
 }
 
-.search-input {
+.input {
     background: #FFFFFF;
     border: 1px solid #D9D9D9;
     border-radius: 2px;
-    height: 40px;
-    width: 690px;
     font-size: 16px;
     line-height: 24px; 
     /* размер шрифта внутри поля -- 16 пикселей, высота строки -- 24  */
-    background-image: url(../img/home.svg);
+    padding: 8px;
+    padding-left: 35px;
     background-repeat: no-repeat;
     background-position: left 11px center;
-    padding-left: 35px;
+}
+
+.input-adress {
+    width: 690px;
+    background-image: url(../img/home.svg);
+}
+
+.input-search {
+    width: 300px;
+    background-image: url(../img/search.svg);
 }
 
 .buttons {
@@ -71,6 +79,7 @@ body {
     background: #FFF1B8 url(../img/promo-image.png) no-repeat top -100px right -247px / 924px;
     border-radius: 10px;
     padding: 68px 70px;
+    margin-bottom: 56px;
 }
 
 .promo-title {
@@ -90,4 +99,20 @@ body {
     line-height: 28px;
     color: #302C34;
     max-width: 538px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0;
+    color: #000000;
 }
