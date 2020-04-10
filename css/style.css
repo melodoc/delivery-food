@@ -302,6 +302,10 @@ body {
   display: none;
 }
 
+.is-open{
+  display: flex;
+}
+
 .modal-dialog {
   max-width: 780px;
   width: 95%;
