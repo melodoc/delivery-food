@@ -46,7 +46,7 @@ button {
 
 .input-address {
   width: 100%;
-  background-image: url(../img/home.svg);
+  background-image: url(../img/icon/home.svg);
 }
 
 .search {
@@ -55,7 +55,7 @@ button {
 
 .input-search {
   width: 300px;
-  background-image: url(../img/search.svg);
+  background-image: url(../img/icon/search.svg);
   margin-left: auto;
 }
 
@@ -111,8 +111,8 @@ button {
   width: 24px;
   height: 24px;
   background-color: #fff;
-  -webkit-mask: url("../img/user.svg") no-repeat 50% 50%;
-  mask: url("../img/user.svg") no-repeat 50% 50%;
+  -webkit-mask: url("../img/icon/user.svg") no-repeat 50% 50%;
+  mask: url("../img/icon/user.svg") no-repeat 50% 50%;
   background-repeat: no-repeat;
 }
 
@@ -124,8 +124,8 @@ button {
   width: 24px;
   height: 24px;
   background-color: #595959;
-  -webkit-mask: url("../img/shopping-cart.svg") no-repeat 50% 50%;
-  mask: url("../img/shopping-cart.svg") no-repeat 50% 50%;
+  -webkit-mask: url("../img/icon/shopping-cart.svg") no-repeat 50% 50%;
+  mask: url("../img/icon/shopping-cart.svg") no-repeat 50% 50%;
   background-repeat: no-repeat;
 }
 
@@ -173,7 +173,7 @@ button {
 }
 
 .pizza {
-  background: #fff1b8 url(../img/promo-image.png) no-repeat top -100px right -250px / 830px
+  background: #fff1b8 url(../img/promo/promo-image.png) no-repeat top -100px right -250px / 830px
 }
 
 
