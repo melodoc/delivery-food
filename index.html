@@ -19,28 +19,36 @@
           <a href="index.html" class="logo">
               <img src="img/logo.svg" alt="Delivery Food"/>
           </a>
-        <input
-          type="text"
-          class="input input-adress"
-          placeholder="Адрес доставки"
-        />
-        <div class="buttons">
-          <button class="button button-primary">
-            <img src="img/user.svg" alt="user" class="button-icon" />
+        <label class="address">
+                <input 
+                type="text" 
+                class="input input-address"
+                placeholder="Адрес доставки"
+                />
+            </label>
+            <div class="buttons">
+                <span class="user-name"></span>
+                <button class="button button-primary button-auth">
+            <span class="button-auth-svg"></span>
             <span class="button-text">Войти</span>
           </button>
-          <button class="button">
-            <img src="img/shopping-cart.svg" alt="user" class="button-icon" />
+                <button class="button button-cart" id="cart-button">
+            <span class="button-cart-svg"></span>
             <span class="button-text">Корзина</span>
-          </button>
-        </div>
-      </header>
+                </button>
+                <button class="button button-primary button-out">
+            <span class="button-text">Выйти</span>
+            <span class="button-out-svg"></span>
+                </button>
+            </div>
+        </header>
     </div>
     <!-- /.container -->
     <main class="main">
       <div class="container">
         <!-- Баннер -->
-        <section class="promo">
+        <section class="container-promo">
+          <section class="promo pizza">
           <h1 class="promo-title">Онлайн-сервис <br />доставки еды на дом</h1>
           <p class="promo-text">
             Блюда из любимого ресторана привезет курьер в перчатках, маске и с
@@ -48,19 +56,22 @@
           </p>
         </section>
         <!-- Секция с ресторанами -->
-        <section class="restaurants">
-          <section class="section-heading">
+            </section>
+            <section class="restaurants">
+                <div class="section-heading">
             <h2 class="section-title">Рестораны</h2>
-            <input
+            <label class="search">
+                <input
               type="text"
               class="input input-search"
               placeholder="Поиск блюд и ресторанов"
             />
-          </section>
+          </label>
+                </div>
           <!-- Секция с карточками -->
-          <div class="cards">
+          <div class="cards cards-restaurants">
             <!-- Карточка Пицца плюс -->
-            <a href="restaurant.html" class="card">
+            <a href="restaurant.html" class="card card-restaurant">
               <img src="img/restaurant/pizza-plus.jpg" alt="image" class="card-image" />
               <div class="card-text">
                 <div class="card-heading">
@@ -83,7 +94,7 @@
             </a>
 
             <!-- Карточка Тануки -->
-            <a href="restaurant.html" class="card">
+            <a href="restaurant.html" class="card card-restaurant">
               <img src="img/restaurant/tanuki.jpg" alt="image" class="card-image" />
               <div class="card-text">
                 <div class="card-heading">
@@ -104,8 +115,8 @@
             </a>
 
             <!-- Карточка FoodBand -->
-            <a href="restaurant.html" class="card">
-              <img src="img/restaurant/food-band.jpg" alt="image" class="card-image" />
+            <a href="restaurant.html" class="card card-restaurant">
+                <img src="img/restaurant/food-band.jpg" alt="image" class="card-image" />
               <div class="card-text">
                 <div class="card-heading">
                   <h3 class="card-title">FoodBand</h3>
@@ -125,7 +136,7 @@
             </a>
 
             <!-- Карточка Жадина-пицца -->
-            <a href="restaurant.html" class="card">
+            <a href="restaurant.html" class="card card-restaurant">
               <img src="img/restaurant/pizza.jpg" alt="image" class="card-image" />
               <div class="card-text">
                 <div class="card-heading">
@@ -146,7 +157,7 @@
             </a>
 
             <!-- Карточка Точка еды -->
-            <a href="restaurant.html" class="card">
+            <a href="restaurant.html" class="card card-restaurant">
               <img src="img/restaurant/food-point.jpg" alt="image" class="card-image" />
               <div class="card-text">
                 <div class="card-heading">
@@ -167,7 +178,7 @@
             </a>
 
             <!-- Карточка Bar&Burger -->
-            <a href="restaurant.html" class="card">
+            <a href="restaurant.html" class="card card-restaurant">
               <img src="img/restaurant/bar-burger.jpg" alt="image" class="card-image" />
               <div class="card-text">
                 <div class="card-heading">
