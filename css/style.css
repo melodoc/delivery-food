@@ -55,7 +55,7 @@ button {
 
 .input-search {
   width: 300px;
-  background-image: url(../img/icon/search.svg);
+  background-image: url(../img/search.svg);
   margin-left: auto;
 }
 
@@ -85,7 +85,6 @@ button {
   color: #fff;
 }
 
-
 .button-primary {
   background: #1890ff;
   border: 1px solid #1890ff;
@@ -97,6 +96,10 @@ button {
   background: #ffffff;
   border: 1px solid #d9d9d9;
   color: #595959;
+}
+
+.button-icon {
+  margin-right: 6px;
 }
 
 .button-card-text {
@@ -159,10 +162,8 @@ button {
 }
 
 .promo-slider {
-
   width: 600px;
   height: 300px;
-
 }
 
 .promo {
@@ -173,9 +174,9 @@ button {
 }
 
 .pizza {
-  background: #fff1b8 url(../img/promo/promo-image.png) no-repeat top -100px right -250px / 830px
+  background: #fff1b8 url(../img/promo/promo-image.png) no-repeat top -100px right -250px /
+    830px;
 }
-
 
 .promo-title {
   font-family: Roboto;
@@ -198,9 +199,9 @@ button {
 
 .main {
   background: linear-gradient(
-  180deg,
-  rgba(245, 245, 245, 0) 1.04%,
-  #f5f5f5 100%
+    180deg,
+    rgba(245, 245, 245, 0) 1.04%,
+    #f5f5f5 100%
   );
 }
 
@@ -230,12 +231,16 @@ button {
 
 .card {
   background: #ffffff;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border-radius: 7px;
   overflow: hidden;
   margin-bottom: 30px;
   flex-basis: 31%;
   text-decoration: none;
+}
+
+.card-restaurant {
+  cursor: pointer;
 }
 
 .card-image {
@@ -245,10 +250,14 @@ button {
 }
 
 .card-text {
-  padding-top: 20px;
-  padding-bottom: 35px;
-  padding-left: 23px;
-  padding-right: 23px;
+  padding: 20px 23px 35px;
+  min-height: 275px;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurants .card-text {
+  min-height: auto;
 }
 
 .card-heading {
@@ -267,7 +276,7 @@ button {
   color: #000000;
 }
 
-.card:visited .card-title{
+.card:visited .card-title {
   color: #4974a5;
 }
 
@@ -328,6 +337,12 @@ button {
 
 .price {
   margin-right: 10px;
+}
+
+.ingredients {
+  color: #8c8c8c;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .category {
@@ -405,7 +420,18 @@ button {
   z-index: 999;
 }
 
-.is-open{
+.modal-auth {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 999;
+}
+
+.is-open {
   display: flex;
 }
 
@@ -416,6 +442,21 @@ button {
   border-radius: 5px;
   margin: auto;
   padding: 40px 45px;
+}
+
+.modal-dialog-auth {
+  width: auto;
+  position: relative;
+}
+
+.label-auth {
+  display: block;
+  margin: 30px;
+}
+
+.label-auth span {
+  width: 80px;
+  display: inline-block;
 }
 
 .modal-header {
@@ -432,12 +473,31 @@ button {
   line-height: 42px;
 }
 
+.close {
+  font-size: 36px;
+  border: none;
+  background-color: transparent;
+}
+
+.close-auth {
+  font-size: 36px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.modal-body {
+  margin-bottom: 22px;
+}
+
 .food-row {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   padding-bottom: 8px;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #d9d9d9;
   margin-bottom: 15px;
 }
 
@@ -455,7 +515,7 @@ button {
   line-height: 32px;
 }
 
-.food-counter{
+.food-counter {
   display: flex;
   align-items: center;
 }
@@ -476,36 +536,31 @@ button {
   color: #40a9ff;
 }
 
-.counter{
+.counter-button:hover {
+  background: #40a9ff;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.counter {
   font-size: 16px;
   line-height: 24px;
   margin-left: 10px;
   margin-right: 10px;
 }
-.close {
-  font-size: 36px;
-  border: none;
-  background-color: transparent;
-}
 
-.modal-body{
+.modal-body {
   margin-bottom: 52px;
 }
 
-.modal-footer{
+.modal-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.modal-pricetag{
-  background: #262626;
-  border-radius: 5px;
-  color: #ffffff;
-  padding: 15px 20px;
-  font-size: 20px;
-  line-height: 23px;
-  font-weight: bold;
+.modal-auth .modal-footer {
+  justify-content: flex-end;
 }
 
 .footer-buttons {
@@ -513,48 +568,57 @@ button {
   align-items: center;
 }
 
+.modal-pricetag {
+  background: #262626;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 15px 20px;
+  font-size: 20px;
+  line-height: 23px;
+}
+
 @media (max-width: 1366px) {
   .container {
-  max-width: 960px;
+    max-width: 960px;
   }
   .promo {
-  background-position: center right -300px;
-  background-size: 750px;
+    background-position: center right -300px;
+    background-size: 750px;
   }
   .rating {
-  margin-right: 15px;
+    margin-right: 15px;
   }
   .card-image {
-  width: 100%;
+    width: 100%;
   }
   .category,
   .price {
-  font-style: 14px;
+    font-style: 14px;
   }
 }
 
 @media (max-width: 992px) {
   .container {
-  max-width: 750px;
+    max-width: 750px;
   }
   .promo {
-  padding: 50px;
-  background-size: 500px;
-  background-position: center right -200px;
+    padding: 50px;
+    background-size: 500px;
+    background-position: center right -200px;
   }
   .promo-text {
-  font-size: 18px;
-  max-width: 400px;
+    font-size: 18px;
+    max-width: 400px;
   }
   .card {
-  flex-basis: 49%;
+    flex-basis: 49%;
   }
   .card-image {
-  width: 100%;
+    width: 100%;
   }
 
   .footer-link {
-  font-style: 16px;
+    font-style: 16px;
   }
 }
 
@@ -583,12 +647,10 @@ button {
     margin-left: 20px;
   }
 
-
   .pizza {
     background-size: 400px;
     background-position: bottom 50px right -200px;
   }
-
 
   .kebab {
     background-position: top -5px right -74px;
@@ -617,61 +679,61 @@ button {
 
 @media (max-width: 578px) {
   .container {
-  width: 90%;
+    width: 90%;
   }
 
   .address {
     min-width: 100%;
     order: 1;
   }
-  
+
   .header {
-  flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .input-adress {
-  margin-top: 15px;
-  order: 5;
-  flex: 1;
+    margin-top: 15px;
+    order: 5;
+    flex: 1;
   }
   .promo {
-  background-image: none;
+    background-image: none;
   }
   .promo-title {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
   }
   .rating,
   .price,
   .category {
-  font-size: 14px;
+    font-size: 14px;
   }
   .section-title {
-  font-size: 20px;
+    font-size: 20px;
   }
   .card {
-  flex-basis: 100%;
+    flex-basis: 100%;
   }
   .card-image {
-  width: 100%;
+    width: 100%;
   }
   .footer {
-  padding: 30px 0;
+    padding: 30px 0;
   }
   .footer-block {
-  align-items: flex-start;
+    align-items: flex-start;
   }
   .footer-nav {
-  margin-left: 0;
-  margin-right: 0;
-  order: 0;
-  display: flex;
-  flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+    order: 0;
+    display: flex;
+    flex-direction: column;
   }
   .footer-logo {
-  margin-right: 15px;
-  order: 1;
+    margin-right: 15px;
+    order: 1;
   }
   .social-links {
-  order: 2;
+    order: 2;
   }
 }
 
@@ -686,7 +748,6 @@ button {
 
   .user-name {
     margin: 10px;
-
   }
 
   .buttons {
@@ -697,7 +758,6 @@ button {
   .button {
     min-height: 40px;
     padding: 5px 12px;
-
   }
 
   .button-out-svg {
@@ -740,11 +800,10 @@ button {
   }
 }
 
-
 @font-face {
   font-family: "Roboto";
-  src: url("fonts/Roboto.woff2") format("woff2")
-      url("fonts/Roboto.woff") format("woff") ;
+  src: url("fonts/Roboto.woff2") format("woff2") url("fonts/Roboto.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -752,7 +811,7 @@ button {
 @font-face {
   font-family: "Roboto";
   src: url("fonts/Robotobold.woff2") format("woff2"),
-      url("fonts/Robotobold.woff") format("woff");
+    url("fonts/Robotobold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
