@@ -54,9 +54,9 @@ button {
 }
 
 .input-search {
-  width: 300px;
-  background-image: url(../img/search.svg);
-  margin-left: auto;
+    width: 300px;
+    background-image: url(../img/icon/search.svg);
+
 }
 
 .buttons {
@@ -226,14 +226,12 @@ button {
 }
 
 .section-title {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 42px;
-  margin: 0;
-  color: #000000;
-  margin-right: 30px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0 30px 0 0;
+    color: #000000;
 }
 
 .cards {
@@ -259,9 +257,9 @@ button {
 }
 
 .card-image {
-  width: 384px;
-  height: 250px;
-  object-fit: cover;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
 .card-text {
@@ -363,10 +361,10 @@ button {
 }
 
 .category {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  min-width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 150px;
 }
 
 .price:after {
@@ -510,12 +508,12 @@ button {
 }
 
 .food-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #D9D9D9;
-  margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 15px;
 }
 
 .food-name {
@@ -739,55 +737,65 @@ button {
         min-width: 100%;
         order: 1;
     }
-  
-  .header {
-    flex-wrap: wrap;
-  }
-  .input-adress {
-    margin-top: 15px;
-    order: 5;
-    flex: 1;
-  }
-  .promo {
-    background-image: none;
-  }
-  .promo-title {
-    margin-bottom: 10px;
-  }
-  .rating,
-  .price,
-  .category {
-    font-size: 14px;
-  }
-  .section-title {
-    font-size: 20px;
-  }
-  .card {
-    flex-basis: 100%;
-  }
-  .card-image {
-    width: 100%;
-  }
-  .footer {
-    padding: 30px 0;
-  }
-  .footer-block {
-    align-items: flex-start;
-  }
-  .footer-nav {
-    margin-left: 0;
-    margin-right: 0;
-    order: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  .footer-logo {
-    margin-right: 15px;
-    order: 1;
-  }
-  .social-links {
-    order: 2;
-  }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .input-address {
+        margin-top: 15px;
+        order: 5;
+        flex: 1;
+    }
+
+    .promo {
+        background-image: none;
+    }
+
+    .promo-title {
+        margin-bottom: 10px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .card {
+        flex-basis: 100%;
+    }
+
+    .card-text {
+        min-height: auto;
+    }
+
+    .card-image {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer-block {
+        align-items: flex-start;
+    }
+
+    .footer-nav {
+        margin-left: 0;
+        margin-right: 0;
+        order: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        margin-right: 15px;
+        order: 1;
+    }
+
+    .social-links {
+        order: 2;
+    }
 }
 
 @media (max-width: 480px) {
