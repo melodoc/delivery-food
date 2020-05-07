@@ -193,7 +193,6 @@ button {
 }
 
 .promo-title {
-  font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 39px;
@@ -202,7 +201,6 @@ button {
 }
 
 .promo-text {
-  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -864,18 +862,3 @@ button {
 }
 
 
-@font-face {
-  font-family: "Roboto";
-  src: url("fonts/Roboto.woff2") format("woff2")
-          url("fonts/Roboto.woff") format("woff") ;
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("fonts/Robotobold.woff2") format("woff2"),
-          url("fonts/Robotobold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
