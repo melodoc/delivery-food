@@ -40,6 +40,7 @@ function authorized() {
         userName.style.display = '';
         buttonOut.style.display = '';
         buttonOut.removeEventListener('click', logOut);
+        logInForm.reset();
         checkAuth();
     }
 
