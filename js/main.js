@@ -20,7 +20,7 @@ const userName = document.querySelector('.user-name');
 const buttonOut = document.querySelector('.button-out');
 
 
-let login = '';
+let login = localStorage.getItem('login');
 
 
 function toogleModalAuth() {
@@ -34,8 +34,8 @@ function authorized() {
     console.log('Avtorizonav');
 
     function logOut () {
-        login = '';
-
+        login = null;
+        localStorage.removeItem('login');
         buttonAuth.style.display = '';
         userName.style.display = '';
         buttonOut.style.display = '';
@@ -59,6 +59,9 @@ function notAuthorized() {
     function logIn(event) {
         event.preventDefault();
         login = loginInput.value;
+
+        localStorage.setItem('login', login);
+
         toogleModalAuth();
 
         buttonAuth.removeEventListener('click', toogleModalAuth);
