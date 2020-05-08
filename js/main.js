@@ -54,13 +54,17 @@ function authorized() {
     buttonOut.addEventListener('click', logOut);
 }
 
+function maskInput(string) {
+ return !!string.trim();
+}
+
 function notAuthorized() {
     console.log('Ne Avtorizovan');
 
     function logIn(event) {
         event.preventDefault();
 
-        if (loginInput.value.trim()) {
+        if (maskInput(loginInput.value)) {
 
             login = loginInput.value;
 
