@@ -21,6 +21,15 @@ const cardsMenu = document.querySelector('.cards-menu');
 
 let login = localStorage.getItem('login');
 
+// login validation check
+
+const valid = function(str) {
+    const nameReg = /^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$/;
+    return nameReg.test(str);
+}
+
+// buttons
+
 function toggleModal() {
     modal.classList.toggle('is-open');
 }
@@ -55,17 +64,13 @@ function authorized() {
     buttonOut.addEventListener('click', logOut);
 }
 
-function maskInput(string) {
- return !!string.trim();
-}
-
 function notAuthorized() {
     console.log('Ne Avtorizovan');
 
     function logIn(event) {
         event.preventDefault();
 
-        if (maskInput(loginInput.value)) {
+        if (valid(loginInput.value)) {
 
             login = loginInput.value;
 
@@ -80,6 +85,8 @@ function notAuthorized() {
             checkAuth();
         } else {
             loginInput.style.borderColor = 'red';
+            loginInput.style.
+            loginInput.value = "";
         }
     }
 
