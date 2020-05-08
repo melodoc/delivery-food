@@ -39,6 +39,14 @@ function toogleModalAuth() {
     loginInput.style.borderColor = '';
 }
 
+//return to main page
+
+function returnMain() {
+    containerPromo.classList.remove('hide');
+    restaurants.classList.remove('hide');
+    menu.classList.add('hide');
+}
+
 // authorized and non-autorized cases
 
 function authorized() {
@@ -53,6 +61,7 @@ function authorized() {
         buttonOut.removeEventListener('click', logOut);
         logInForm.reset();
         checkAuth();
+        returnMain();
     }
 
     userName.textContent = login;
@@ -188,11 +197,7 @@ close.addEventListener('click', toggleModal);
 
 cardsRestaurants.addEventListener('click', openGoods);
 
-logo.addEventListener('click', function() {
-    containerPromo.classList.remove('hide');
-    restaurants.classList.remove('hide');
-    menu.classList.add('hide');
-})
+logo.addEventListener('click', returnMain)
 
 checkAuth();
 
