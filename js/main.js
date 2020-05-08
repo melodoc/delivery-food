@@ -9,8 +9,6 @@ function toggleModal() {
     modal.classList.toggle('is-open');
 }
 
-//auth button implementation
-
 const buttonAuth = document.querySelector('.button-auth');
 const modalAuth = document.querySelector('.modal-auth');
 const closeAuth = document.querySelector('.close-auth');
@@ -18,10 +16,14 @@ const logInForm = document.querySelector('#logInForm');
 const loginInput = document.querySelector('#login');
 const userName = document.querySelector('.user-name');
 const buttonOut = document.querySelector('.button-out');
+const cardsRestaurants = document.querySelector('.cards-restaurants');
+const containerPromo = document.querySelector('.container-promo');
+const restaurants = document.querySelector('.restaurants');
+const menu = document.querySelector('.menu');
+const logo = document.querySelector('.logo');
 
 
 let login = localStorage.getItem('login');
-
 
 function toogleModalAuth() {
     modalAuth.classList.toggle('is-open');
@@ -96,3 +98,58 @@ function checkAuth() {
 }
 
 checkAuth();
+
+
+//cards view
+
+function createCardRestaurant () {
+
+    const card = `
+        <a class="card card-restaurant">
+            <img src="img/tanuki/preview.jpg" alt="image" class="card-image"/>
+            <div class="card-text">
+                <div class="card-heading">
+                    <h3 class="card-title">Тануки</h3>
+                    <span class="card-tag tag">60 мин</span>
+                </div>
+                <div class="card-info">
+                    <div class="rating">
+                        4.5
+                    </div>
+                    <div class="price">От 1 200 ₽</div>
+                    <div class="category">Суши, роллы</div>
+                </div>
+            </div>
+        </a>       
+    `;
+
+    cardsRestaurants.insertAdjacentHTML('beforeend', card)
+
+}
+
+createCardRestaurant ();
+createCardRestaurant ();
+createCardRestaurant ();
+
+function openGoods(event) {
+
+    const target = event.target;
+
+    const restaurant = target.closest('.card-restaurant');
+
+    if (restaurant) {
+
+        containerPromo.classList.add('hide')
+        restaurants.classList.add('hide')
+        menu.classList.remove('hide')
+
+    }
+
+}
+
+cardsRestaurants.addEventListener('click', openGoods);
+logo.addEventListener('click', function() {
+    containerPromo.classList.remove('hide')
+    restaurants.classList.remove('hide')
+    menu.classList.add('hide')
+})
