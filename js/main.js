@@ -50,7 +50,7 @@ function toggleModal() {
     modal.classList.toggle('is-open');
 }
 
-function toogleModalAuth() {
+function toggleModalAuth() {
     modalAuth.classList.toggle('is-open');
     loginInput.style.borderColor = '';
 }
@@ -101,10 +101,10 @@ function notAuthorized() {
 
             localStorage.setItem('login', login);
 
-            toogleModalAuth();
+            toggleModalAuth();
 
-            buttonAuth.removeEventListener('click', toogleModalAuth);
-            closeAuth.removeEventListener('click', toogleModalAuth);
+            buttonAuth.removeEventListener('click', toggleModalAuth);
+            closeAuth.removeEventListener('click', toggleModalAuth);
             logInForm.removeEventListener('submit', logIn);
 
             checkAuth();
@@ -115,8 +115,8 @@ function notAuthorized() {
         }
     }
 
-    buttonAuth.addEventListener('click', toogleModalAuth);
-    closeAuth.addEventListener('click', toogleModalAuth);
+    buttonAuth.addEventListener('click', toggleModalAuth);
+    closeAuth.addEventListener('click', toggleModalAuth);
     logInForm.addEventListener('submit', logIn);
 }
 
@@ -217,7 +217,7 @@ function openGoods(event) {
             });            
         }
     } else {
-        toogleModalAuth();
+        toggleModalAuth();
     }
 }
 
