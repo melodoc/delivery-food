@@ -25,6 +25,7 @@ let login = localStorage.getItem('login');
 
 function toogleModalAuth() {
     modalAuth.classList.toggle('is-open');
+    loginInput.style.borderColor = '';
 }
 
 
@@ -58,17 +59,23 @@ function notAuthorized() {
 
     function logIn(event) {
         event.preventDefault();
-        login = loginInput.value;
 
-        localStorage.setItem('login', login);
+        if (loginInput.value) {
 
-        toogleModalAuth();
+            login = loginInput.value;
 
-        buttonAuth.removeEventListener('click', toogleModalAuth);
-        closeAuth.removeEventListener('click', toogleModalAuth);
-        logInForm.removeEventListener('submit', logIn);
+            localStorage.setItem('login', login);
 
-        checkAuth();
+            toogleModalAuth();
+
+            buttonAuth.removeEventListener('click', toogleModalAuth);
+            closeAuth.removeEventListener('click', toogleModalAuth);
+            logInForm.removeEventListener('submit', logIn);
+
+            checkAuth();
+        } else {
+            loginInput.style.borderColor = 'red';
+        }
     }
 
     buttonAuth.addEventListener('click', toogleModalAuth);
