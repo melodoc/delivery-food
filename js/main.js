@@ -366,6 +366,7 @@ function init() {
     new Swiper('.swiper-container', {
         loop: true,
         autoplay: true,
+        speed: 2000,
     });
 }
 
